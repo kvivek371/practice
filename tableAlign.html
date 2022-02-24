@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <center>
+            <div>
+                <table>
+                    <tr>
+                        <td width="200">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <b>Starting Position:</b>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td bgcolor="lightgrey" width="50">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/black-ball.gif">                    
+                                    </td>
+                                    <td bgcolor="lightgrey" width="50">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/black-ball.gif">
+                                    </td>
+                                    <td bgcolor="lightgrey" width="50">
+                                        
+                                    </td>
+                                    <td bgcolor="lightgrey" width="50">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/white-ball.gif">
+                                        
+                                    </td>
+                                    <td bgcolor="lightgrey" width="50">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/white-ball.gif">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>            
+            </div>
+        </center>
+        <center>
+            <div>
+                <table>
+                    <tr>
+                        <td width="200">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <b>Black moves ahead:</b>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td bgcolor="lightgrey" width="50">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/black-ball.gif">                    
+                                    </td>
+                                    <td bgcolor="lightgrey" width="50">
+                                         
+                                    </td>
+                                    <td bgcolor="lightgrey" width="50">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/black-ball.gif">    
+                                    </td>
+                                    <td bgcolor="lightgrey" width="50">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/white-ball.gif">
+                                        
+                                    </td>
+                                    <td bgcolor="lightgrey" width="50">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/white-ball.gif">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>            
+            </div>
+        </center>
+<!--        <center>
+            <div>
+                <table width="50%">
+                    <tr>
+                        <td>
+                            <table width="100%" border="1">
+                                <tr>
+                                    <td>
+                                        <b>Black moves ahead:</b>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table width="100%" border="1">
+                                <tr>
+                                    <td width="20%" bgcolor="lightblue">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/black-ball.gif">                    
+                                    </td>
+                                    <td width="20%" bgcolor="lightblue">
+                                        
+                                    </td>
+                                    <td width="20%" bgcolor="lightblue">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/black-ball.gif">
+                                    </td>
+                                    <td width="20%" bgcolor="lightblue">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/white-ball.gif">
+                                        
+                                    </td>
+                                    <td width="20%" bgcolor="lightblue">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/white-ball.gif">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>            
+            </div>
+        </center>
+        <center>
+            <div>
+                <table width="50%">
+                    <tr>
+                        <td>
+                            <table width="100%" border="1">
+                                <tr>
+                                    <td>
+                                        <b>White jumps:</b>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table width="100%" border="1">
+                                <tr>
+                                    <td width="20%" bgcolor="lightblue">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/black-ball.gif">                    
+                                    </td>
+                                    <td width="20%" bgcolor="lightblue">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/white-ball.gif">
+                                    </td>
+                                    <td width="20%" bgcolor="lightblue">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/black-ball.gif">
+                                    </td>
+                                    <td width="20%" bgcolor="lightblue">
+                                                                            
+                                    </td>
+                                    <td width="20%" bgcolor="lightblue">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/white-ball.gif">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>            
+            </div>
+        </center>
+        <center>
+            <div>
+                <table width="50%">
+                    <tr>
+                        <td>
+                            <table width="100%" border="1">
+                                <tr>
+                                    <td>
+                                        <b>Black moves ahead:</b>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table width="100%" border="1">
+                                <tr>
+                                    <td width="20%" bgcolor="lightblue">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/black-ball.gif">                    
+                                    </td>
+                                    <td width="20%" bgcolor="lightblue">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/white-ball.gif">
+                                    </td>
+                                    <td width="20%" bgcolor="lightblue">
+                                        
+                                    </td>
+                                    <td width="20%" bgcolor="lightblue">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/black-ball.gif">                                    
+                                    </td>
+                                    <td width="20%" bgcolor="lightblue">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/white-ball.gif">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>            
+            </div>
+        </center>
+        <center>
+            <div>
+                <table width="50%">
+                    <tr>
+                        <td>
+                            <table width="100%" border="1">
+                                <tr>
+                                    <td>
+                                        <b>Black jumps:</b>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table width="100%" border="1">
+                                <tr>
+                                    <td width="20%" bgcolor="lightblue">
+                                                            
+                                    </td>
+                                    <td width="20%" bgcolor="lightblue">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/white-ball.gif">
+                                    </td>
+                                    <td width="20%" bgcolor="lightblue">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/black-ball.gif">
+                                    </td>
+                                    <td width="20%" bgcolor="lightblue">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/black-ball.gif">                                    
+                                    </td>
+                                    <td width="20%" bgcolor="lightblue">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/white-ball.gif">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>            
+            </div>
+        </center>
+        <center>
+            <div>
+                <table width="50%">
+                    <tr>
+                        <td>
+                            <table width="100%" border="">
+                                <tr>
+                                    <td>
+                                        <b>White moves ahead:</b>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table width="100%" border="1" bgcolor="lightblue">
+                                <tr>
+                                    <td width="20%" bgcolor="lightblue">
+                                                            
+                                    </td>
+                                    <td width="20 bgcolor="lightblue">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/white-ball.gif">
+                                    </td>
+                                    <td width="20%" bgcolor="lightblue">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/black-ball.gif">
+                                    </td>
+                                    <td width="20%" bgcolor="lightblue">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/black-ball.gif">                                    
+                                    </td>
+                                    <td width="20%" bgcolor="lightblue">
+                                        <img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/white-ball.gif">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>            
+                <table width="50%">
+                    <tr>
+                        <td colspan="5">
+                            <b>Stuck!</b>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </center>
+-->
+        <hr>
+        <hr>
+        <hr>
+
+        <pre>
+            <i><font color="#0000ff">16.</font>  </i><b><font color="#000000">WHITE  WHITE  WHITE  _____  BLACK  BLACK  BLACK</font></b>
+            <i><font color="#0000ff">15.</font></i>  <b><font color="#000000">WHITE  WHITE  WHITE  BLACK  _____  BLACK  BLACK</font></b>
+            <i><font color="#0000ff">14.</font></i>  <b><font color="#000000">WHITE  WHITE  _____  BLACK  WHITE  BLACK  BLACK</font></b>
+            <i><font color="#0000ff">13.</font></i>  <b><font color="#000000">WHITE  _____  WHITE  BLACK  WHITE  BLACK  BLACK</font></b>
+            <i><font color="#0000ff">12.</font></i>  <b><font color="#000000">WHITE  BLACK  WHITE  _____  WHITE  BLACK  BLACK</font></b>
+            <i><font color="#0000ff">11. </font></i> <b><font color="#000000">WHITE  BLACK  WHITE  BLACK  WHITE  _____  BLACK</font></b>
+            <i><font color="#0000ff">10.</font></i> <b><font color="#000000">WHITE  BLACK  WHITE  BLACK  WHITE  BLACK  _____</font></b>
+            <i><font color="#0000ff"> 9. </font></i> <b><font color="#000000">WHITE  BLACK  WHITE  BLACK  _____  BLACK  WHITE</font></b>
+            <i><font color="#0000ff"> 8. </font></i> <b><font color="#000000">WHITE  BLACK  _____  BLACK  WHITE  BLACK  WHITE</font></b>
+            <i><font color="#0000ff"> 7. </font></i> <b><font color="#000000">_____  BLACK  WHITE  BLACK  WHITE  BLACK  WHITE</font></b>
+            <i><font color="#0000ff"> 6. </font></i> <b><font color="#000000">BLACK  _____  WHITE  BLACK  WHITE  BLACK  WHITE</font></b>
+            <i><font color="#0000ff"> 5. </font></i> <b><font color="#000000">BLACK  BLACK  WHITE  _____  WHITE  BLACK  WHITE</font></b>
+            <i><font color="#0000ff"> 4. </font></i> <b><font color="#000000">BLACK  BLACK  WHITE  BLACK  WHITE  _____  WHITE</font></b>
+            <i><font color="#0000ff"> 3. </font></i> <b><font color="#000000">BLACK  BLACK  WHITE  BLACK  _____  WHITE  WHITE</font></b>
+            <i><font color="#0000ff"> 2.</font></i>  <b><font color="#000000">BLACK  BLACK  _____  BLACK  WHITE  WHITE  WHITE</font></b>
+            <i><font color="#0000ff"> 1. </font></i> <b><font color="#000000">BLACK  BLACK  BLACK  _____  WHITE  WHITE  WHITE</font></b>
+        </pre>
+
+
+
+
+
+
+    </body>
+</html>
